@@ -71,7 +71,7 @@ a {
 
 #nav {
 	position: fixed;
-	height: 50px;
+	height: 75px;
 	width: 100%;
 	z-index: 1;
 	background-color: #2f2f2f;
@@ -80,7 +80,7 @@ a {
 
 #nav-title {
 	position: absolute;
-	top: 15px;	
+	top: 35px;	
 	left: 50px;
 	font-size: 18pt;
 }
@@ -99,7 +99,7 @@ a {
 	position: relative;
 	padding-right: 100px;
 	float: right;
-	top: 20px;
+	top: 40px;
 	display: none;
 }
 
