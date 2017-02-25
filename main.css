@@ -49,45 +49,89 @@ table {
 /* END CSS RESET*/
 
 
-
-
 html {
 	height: 100%;
 }
 
 body {
 	height: 100%;
-	font-family: 'Roboto Condensed', sans serif;
-	background-color: #777777;
+	font-family: 'Calibri', sans serif;
+	background-color: #444444;
+	color: #fffff5;
 }
 
 a {
 	text-decoration: none;
+	color: #8CC642;
+}
+
+header {
+	position: fixed;
+	height: 75px;
+	width: 100%;
+	z-index: 1;
+	background-color: #262626;
+	font-variant: small-caps;	
+}
+
+nav {
+	position: relative;
+	padding-right: 50px;
+	float: right;
+	top: 40px;
+}
+
+nav a {
+	height: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	transition: 0.25s;
+	font-size: 14pt;
+}
+
+nav a:hover {
+	transition: 0.25s;
+	color: grey;
+}
+
+nav a:last-child {
+	padding-right: 0px;
+}
+
+main {
+	/*top: 50px;*/
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	padding-top: 75px;
+	height: 100%;
+	width: 1280px;
+	background-color: #373737;
+	border-top: 1px solid;
+	border-color: rgb(140,198,66);
+	color: #fffff5;
+}
+
+footer {
+	background-color: #262626;
+	height: 150px;
+	width: 100%;
 }
 
 .content {
 	padding: 50px;
 }
 
-#nav {
-	position: fixed;
-	height: 75px;
-	width: 100%;
-	z-index: 1;
-	background-color: #2f2f2f;
-	font-variant: small-caps;	
-}
 
 #nav-title {
 	position: absolute;
-	top: 35px;	
+	top: 25px;	
 	left: 50px;
-	font-size: 18pt;
+	font-size: 24pt;
 }
 
 #nav-title a {
 	transition: 0.25s;
-	color: #8CC642;
 }
 
 #nav-title a:hover {
@@ -95,45 +139,12 @@ a {
 	color: #fffff5;
 }
 
-#links {
-	position: relative;
-	padding-right: 100px;
-	float: right;
-	top: 40px;
-	display: none;
-}
-
-#links a {
-	height: 100%;
-	padding-left: 20px;
-	padding-right: 20px;
-	transition: 0.25s;
-	color: #fffff5;
-	font-size: 14pt;
-}
-
-#links a:hover {
-	transition: 0.25s;
-	color: grey;
-}
-
 #left-bar {
 	position: fixed;
 	float: left;
 	width: 2.5%;
 	min-height: 100%;
-	background-color: #373737;
-}
-
-#content-box {
-	position: relative;
-	top: 50px;
-	left: 5%;
-	height: 100%;
-	width: 90%;
-	background-color: #fffff5;
-	border-top: 1px solid;
-	border-color: rgb(140,198,66);
+	background-color: #262626;
 }
 
 
@@ -141,7 +152,6 @@ a {
 	width: 100%;
 	height: auto;
 	font-size: 14pt;
-	background-color: #fffff5;
 }
 
 #left-content p {
@@ -149,9 +159,10 @@ a {
 }
 
 #right-content {
-	background-color: #dddddd;
+	background-color: #2f2f2f;
 	width: 100%;
-	height: 100%;
+	height: auto;
+	min-height: 100%;
 }
 
 #right-content img {
@@ -165,9 +176,24 @@ a {
 	display: inline;
 }
 
-#right-content a {
-	color: green;
+#footer-links {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1280px;
+	text-align: center;
+	padding-top: 50px;
 }
+
+#footer-copyright {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1280px;
+	text-align: center;
+	padding-top: 40px;
+}
+
 
 @media (min-width: 1024px) {
 	#links {
