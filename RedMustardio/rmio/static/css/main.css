@@ -48,6 +48,23 @@ table {
 }
 /* END CSS RESET*/
 
+a {
+	text-decoration: none;
+	color: #8CC642;
+}
+
+h1 {
+	font-size: 18pt;
+	font-weight: 400;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
 
 html {
 	height: 100%;
@@ -56,13 +73,9 @@ html {
 body {
 	height: 100%;
 	font-family: 'Calibri', sans serif;
+	font-weight: lighter;
 	background-color: #444444;
 	color: #fffff5;
-}
-
-a {
-	text-decoration: none;
-	color: #8CC642;
 }
 
 header {

@@ -5,10 +5,16 @@ class Blog(models.Model):
 	name = models.CharField(max_length=100)
 	tagline = models.TextField()
 
+	def __str__(self):
+		return self.name
+
 
 class Author(models.Model):
 	name = models.CharField(max_length=100)
 	email = models.EmailField()
+
+	def __str__(self):
+		return self.name
 
 
 class Entry(models.Model):
@@ -18,14 +24,17 @@ class Entry(models.Model):
 	pub_date = models.DateField()
 	author = models.ManyToManyField(Author)
 
+	def __str__(self):
+		return self.title
+
 
 class Application(models.Model):
 	application_type = models.CharField(max_length=25)
 	thumbnail = models.ImageField(upload_to='apps')
 	description = models.CharField(max_length=100)
 
-	# def __str__(self):
-	# 	return self.name
+	def __str__(self):
+		return self.application_type
 
 
 class WebApp(models.Model):
@@ -35,6 +44,9 @@ class WebApp(models.Model):
 	application = models.ForeignKey(Application, on_delete=models.CASCADE)
 	release_date = models.DateField()
 
+	def __str__(self):
+		return self.name
+
 
 class MobileApp(models.Model):
 	name = models.CharField(max_length=100)
@@ -43,6 +55,9 @@ class MobileApp(models.Model):
 	application = models.ForeignKey(Application, on_delete=models.CASCADE)
 	release_date = models.DateField()
 
+	def __str__(self):
+		return self.name
+		
 
 class AudioApp(models.Model):
 	name = models.CharField(max_length=100)
@@ -50,6 +65,9 @@ class AudioApp(models.Model):
 	description = models.CharField(max_length=300)
 	application = models.ForeignKey(Application, on_delete=models.CASCADE)
 	release_date = models.DateField()
+
+	def __str__(self):
+		return self.name
 
 
 # class Albums(models.Model):
