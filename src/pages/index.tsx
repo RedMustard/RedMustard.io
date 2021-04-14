@@ -2,7 +2,7 @@
 // import Layout from '../components/Layout';
 
 const IndexPage = () => (
-    <div>This page intentionally left blank</div>
+    <div>Stay tuned!</div>
     // <Layout title="RedMustard.io | Home">
     //     <h1>RedMustard.io</h1>
     //     <p>
