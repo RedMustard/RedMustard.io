@@ -1,4 +1,0 @@
-Pillow
-Python 3.4
-Django 1.10
-PostgreSQL 9.5
