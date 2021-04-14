@@ -17,11 +17,14 @@ const WithStaticProps = ({ items }: Props) => (
             Example fetching data from inside
             <code>getStaticProps()</code>
         </p>
+
         <p>You are currently on: /users</p>
+
         <List items={items} />
+
         <p>
             <Link href="/">
-                <a href="/">Go home</a>
+                <div>Go home</div>
             </Link>
         </p>
     </Layout>
