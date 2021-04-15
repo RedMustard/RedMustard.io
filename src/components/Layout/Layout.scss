@@ -1,0 +1,11 @@
+@use 'sass:map';
+@use '../../styles/variables';
+
+.content {
+    align-items: center;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 35px 10px 10px;
+}

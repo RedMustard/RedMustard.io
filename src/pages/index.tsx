@@ -1,16 +1,10 @@
 // import Link from 'next/link';
-// import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 
 const IndexPage = () => (
-    <div>Stay tuned!</div>
-    // <Layout title="RedMustard.io | Home">
-    //     <h1>RedMustard.io</h1>
-    //     <p>
-    //         <Link href="/about">
-    //             <div className="link-like">About</div>
-    //         </Link>
-    //     </p>
-    // </Layout>
+    <Layout title="RedMustard.io | Home" className="home">
+        <h1 className="h-h1">Stay tuned!</h1>
+    </Layout>
 );
 
 export default IndexPage;
