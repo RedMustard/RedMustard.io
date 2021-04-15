@@ -1,9 +1,14 @@
 import Layout from '../../components/Layout/Layout';
+import SectionTitle from '../../components/SectionTitle/SectionTitle';
 
 const IndexPage = () => (
     <Layout title="RedMustard.io | Blog" className="blog">
-        <h1 className="h-h1">Blog</h1>
-        <h3 className="h-h3">Stay tuned!</h3>
+        <SectionTitle>
+            <h1>Blog</h1>
+        </SectionTitle>
+        <SectionTitle>
+            <h3>Stay tuned!</h3>
+        </SectionTitle>
     </Layout>
 );
 

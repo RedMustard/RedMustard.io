@@ -3,16 +3,37 @@
 @use '../../styles/variables';
 
 .footer {
-    align-items: center;
     background-color: color.scale(variables.$darkGrey, $lightness: -10%);
     display: flex;
     flex-direction: row;
     flex-shrink: 0;
-    font-size: map.get(variables.$fontSizes, 'h5');
     height: 70px;
     justify-content: center;
 
-    &__content {
-        padding: .625em;
+    &__container {
+        align-items: flex-end;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: variables.$contentWidth;
+        width: 100%;
+    }
+
+    &__copyright {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        height: 30px;
+    }
+
+    &__social-media-icons {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__social-media-icon {
     }
 }

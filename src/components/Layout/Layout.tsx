@@ -22,7 +22,7 @@ const Layout = ({ children, title = 'RedMustard.io', className = '' }: Props) =>
 
         <Header />
 
-        <div className={`content ${className}`}>
+        <div className={`content l-padding-horz-md ${className}`}>
             {children}
         </div>
 

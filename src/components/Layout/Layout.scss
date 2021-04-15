@@ -2,10 +2,15 @@
 @use '../../styles/variables';
 
 .content {
-    align-items: center;
+    background-color: variables.$darkGrey;
+    box-sizing: border-box;
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 35px 10px 10px;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    width: 100%;
 }
