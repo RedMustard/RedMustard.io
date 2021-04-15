@@ -1,0 +1,47 @@
+@use 'sass:map';
+@use 'variables';
+
+.h-link-like {
+    background-color: transparent;
+    border: 0;
+    color: variables.$green;
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: variables.$lightGrey;
+        transition: .125s;
+    }
+}
+
+.h-h1 {
+    font-size: map.get(variables.$fontSizes, 'h1');
+    font-weight: 500;
+}
+
+.h-h2 {
+    font-size: map.get(variables.$fontSizes, 'h2');
+    font-weight: 500;
+}
+
+.h-h3 {
+    font-size: map.get(variables.$fontSizes, 'h3');
+    font-weight: 500;
+}
+
+.h-h4 {
+    font-size: map.get(variables.$fontSizes, 'h4');
+    font-weight: 500;
+}
+
+.h-h5 {
+    font-size: map.get(variables.$fontSizes, 'h5');
+    font-weight: 500;
+}
+
+.h-h6 {
+    font-size: map.get(variables.$fontSizes, 'h6');
+    font-weight: 500;
+}

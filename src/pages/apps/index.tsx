@@ -1,32 +1,22 @@
 import { GetStaticProps } from 'next';
-import Link from 'next/link';
 
-import { User } from '../../interfaces';
-import { sampleUserData } from '../../utils/sample-data';
-import Layout from '../../components/Layout';
-import List from '../../components/List';
+import { App } from '../../interfaces';
+import { sampleAppData } from '../../utils/sample-data';
+import Layout from '../../components/Layout/Layout';
+// import List from '../../components/List';
 
-type Props = {
-    items: User[];
-};
+// type Props = {
+//     items?: App[];
+// };
 
-const WithStaticProps = ({ items }: Props) => (
-    <Layout title="Users List | Next.js + TypeScript Example">
-        <h1>Users List</h1>
-        <p>
-            Example fetching data from inside
-            <code>getStaticProps()</code>
-        </p>
+// const WithStaticProps = ({ items }: Props) => (
+const WithStaticProps = () => (
+    <Layout title="RedMustard.io | Apps">
+        <h1 className="h-h1">Apps</h1>
+        <h3 className="h-h3">Stay tuned!</h3>
 
-        <p>You are currently on: /users</p>
+        {/* <List items={items} /> */}
 
-        <List items={items} />
-
-        <p>
-            <Link href="/">
-                <div>Go home</div>
-            </Link>
-        </p>
     </Layout>
 );
 
@@ -34,7 +24,7 @@ export const getStaticProps: GetStaticProps = async () => {
     // Example for including static props in a Next.js function component page.
     // Don't forget to include the respective types for any props passed into
     // the component.
-    const items: User[] = sampleUserData;
+    const items: App[] = sampleAppData;
     return { props: { items } };
 };
 

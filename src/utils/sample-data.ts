@@ -1,9 +1,9 @@
-import { User } from '../interfaces';
+import { App } from '../interfaces';
 
-/** Dummy user data. */
-export const sampleUserData: User[] = [
-    { id: 101, name: 'Alice' },
-    { id: 102, name: 'Bob' },
-    { id: 103, name: 'Caroline' },
-    { id: 104, name: 'Dave' },
+/** Dummy App data. */
+export const sampleAppData: App[] = [
+    { route: 'studio', title: 'Mustard Studio' },
+    // { title: 'Bob' },
+    // { title: 'Caroline' },
+    // { title: 'Dave' },
 ];

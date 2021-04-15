@@ -1,5 +1,22 @@
-.link-like {
-    color: blue;
-    display: inline-block;
-    text-decoration: underline;
+@use 'sass:map';
+@use 'helpers';
+@use 'variables';
+@use '../components/Layout/Layout';
+@use '../components/Nav/Nav';
+@use '../components/Header/Header';
+@use '../components/Footer/Footer';
+
+body,
+html {
+    background-color: variables.$darkGrey;
+    color: variables.$white;
+    font-family: variables.$fontFamily;
+    height: 100%;
+    margin: 0;
+}
+
+#__next {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }

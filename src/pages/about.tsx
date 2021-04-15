@@ -1,15 +1,9 @@
-import Link from 'next/link';
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 
 const AboutPage = () => (
-    <Layout title="About | Next.js + TypeScript Example">
-        <h1>About</h1>
-        <p>This is the about page</p>
-        <p>
-            <Link href="/">
-                <div>Go home</div>
-            </Link>
-        </p>
+    <Layout title="RedMustard.io | About" className="about">
+        <h1 className="h-h1">About</h1>
+        <h3 className="h-h3">Stay tuned!</h3>
     </Layout>
 );
 

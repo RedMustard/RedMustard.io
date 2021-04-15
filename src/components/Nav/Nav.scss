@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use '../../styles/variables';
+
+.nav {
+    height: 100%;
+
+    &__link {
+        color: variables.$white;
+        font-size: map.get(variables.$fontSizes, 'h5');
+        height: 100%;
+        margin: 0 10px;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
