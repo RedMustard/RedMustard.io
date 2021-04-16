@@ -2,6 +2,7 @@
 @use '../../styles/variables';
 
 .content {
+    align-items: center;
     background-color: variables.$darkGrey;
     box-sizing: border-box;
     display: flex;

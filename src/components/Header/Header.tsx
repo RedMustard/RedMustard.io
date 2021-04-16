@@ -5,15 +5,15 @@ import Nav from '../Nav/Nav';
 
 const Header = () => (
     <header className="header">
-        <div className="header__container l-padding-horz-md l-padding-vert-sm">
-            <div className="header__nav h-h4">
-                <Nav />
-            </div>
+        <div className="header__container l-padding-horz-lg l-padding-vert-sm">
             <Link href="/">
                 <div className="header__title h-h1">
                     RedMustard.io
                 </div>
             </Link>
+            <div className="header__nav h-h4">
+                <Nav />
+            </div>
         </div>
     </header>
 );

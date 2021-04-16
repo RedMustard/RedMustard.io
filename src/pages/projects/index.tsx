@@ -12,9 +12,9 @@ import SectionTitle from '../../components/SectionTitle/SectionTitle';
 
 // const WithStaticProps = ({ items }: Props) => (
 const WithStaticProps = () => (
-    <Layout title="RedMustard.io | Apps">
+    <Layout title="RedMustard.io | Projects">
         <SectionTitle>
-            <h1>Apps</h1>
+            <h1>Projects</h1>
         </SectionTitle>
         <SectionTitle>
             <h3>Stay tuned!</h3>

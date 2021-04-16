@@ -7,17 +7,17 @@ const AboutPage = () => (
             <h1>About me</h1>
         </SectionTitle>
 
-        <SectionTitle>
+        {/* <SectionTitle>
             <h2>Who am I?</h2>
         </SectionTitle>
-        My name is Travis Barnes and I am a professional software engineer and a hobbyist audio programmer and music producer based in Portland, OR.
+        My name is Travis Barnes and I am a professional software engineer and a hobbyist audio programmer and music producer based in Portland, OR. */}
 
-        <div className="l-margin-btm-lg" />
+        {/* <div className="l-margin-btm-lg" />
 
         <SectionTitle>
             <h2>What are your interests?</h2>
-        </SectionTitle>
-        My
+        </SectionTitle> */}
+        Stay tuned!
 
     </Layout>
 );
