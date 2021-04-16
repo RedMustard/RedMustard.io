@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap');
 $green: #75cf00;
 $lightBlack: #111;
 $lightGrey: #5f6368;
@@ -7,11 +7,14 @@ $grey: #232327;
 $darkGrey: #202024;
 $white: #e8eaed;
 
+$headerHeight: 5.625em;
 $contentWidth: 1280px;
+$footerHeight: 4.375em;
 
 $fontFamily: 'Roboto Condensed', sans-serif;
+$headerFontFamily: 'Fira Sans', sans-serif;
 $fontSizes: (
-    'h1': 1.875em,
+    'h1': 2em,
     'h2': 1.5em,
     'h3': 1.25em,
     'h4': 1em,

@@ -7,6 +7,7 @@
 @use '../components/Footer/Footer';
 @use '../components/SectionTitle/SectionTitle';
 @use '../components/SocialIcon/SocialIcon';
+@use '../components/ContentSection/ContentSection';
 
 body,
 html {
@@ -15,7 +16,25 @@ html {
     font-family: variables.$fontFamily;
     font-size: 1em;
     height: 100%;
+    line-height: 1.5;
     margin: 0;
+    scroll-behavior: smooth;
+    scrollbar-color: variables.$green variables.$darkGrey;
+    scrollbar-width: thin;
+    transition-timing-function: ease;
+}
+
+body::-webkit-scrollbar {
+    width: .375em;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: variables.$darkGrey;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: variables.$green;
+    // outline: 1px solid slategrey;
 }
 
 *:focus {
@@ -23,38 +42,50 @@ html {
 }
 
 h1 {
+    font-family: variables.$headerFontFamily;
     font-size: map.get(variables.$fontSizes, 'h1');
     font-weight: 500;
+    line-height: 1;
     margin: 0;
 }
 
 h2 {
+    font-family: variables.$headerFontFamily;
     font-size: map.get(variables.$fontSizes, 'h2');
     font-weight: 500;
+    line-height: 1;
     margin: 0;
 }
 
 h3 {
+    font-family: variables.$headerFontFamily;
     font-size: map.get(variables.$fontSizes, 'h3');
     font-weight: 500;
+    line-height: 1;
     margin: 0;
 }
 
 h4 {
+    font-family: variables.$headerFontFamily;
     font-size: map.get(variables.$fontSizes, 'h4');
     font-weight: 500;
+    line-height: 1;
     margin: 0;
 }
 
 h5 {
+    font-family: variables.$headerFontFamily;
     font-size: map.get(variables.$fontSizes, 'h5');
     font-weight: 500;
+    line-height: 1.5;
     margin: 0;
 }
 
 h6 {
+    font-family: variables.$headerFontFamily;
     font-size: map.get(variables.$fontSizes, 'h6');
     font-weight: 500;
+    line-height: 1.5;
     margin: 0;
 }
 

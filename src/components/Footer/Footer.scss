@@ -3,12 +3,11 @@
 @use '../../styles/variables';
 
 .footer {
-    // background-color: color.scale(variables.$darkGrey, $lightness: -10%);
     background-color: variables.$darkGrey;
     display: flex;
     flex-direction: row;
     flex-shrink: 0;
-    height: 75px;
+    min-height: variables.$footerHeight;
     justify-content: center;
 
     &__container {
@@ -21,16 +20,34 @@
     }
 
     &__copyright {
-        align-items: flex-start;
+        align-items: center;
         display: flex;
         flex-direction: column;
-        height: 30px;
+        margin: 0 auto;
     }
 
     &__social-media-icons {
         align-items: flex-end;
+        bottom: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        position: fixed;
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer {
+        &__container {
+            flex-direction: column;
+        }
+
+        &__social-media-icons {
+            flex-direction: row;
+            margin: 0 auto;
+            padding-bottom: 10px;
+            position: inherit;
+        }
     }
 }

@@ -6,9 +6,7 @@ const IndexPage = () => (
         <SectionTitle>
             <h1>Blog</h1>
         </SectionTitle>
-        <SectionTitle>
-            <h3>Stay tuned!</h3>
-        </SectionTitle>
+        Coming soon!
     </Layout>
 );
 

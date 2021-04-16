@@ -1,13 +1,25 @@
 @use 'sass:map';
+@use 'sass:color';
 @use '../../styles/variables';
 
 .nav {
     height: 100%;
 
+    &__menu {
+        display: none !important;
+        transition: .3s;
+        transition-timing-function: cubic-bezier(.645, .045, .355, 1);
+    }
+
+    &__links-container {
+    }
+}
+
+.nav-links {
     &__link {
         color: variables.$white;
         font-size: map.get(variables.$fontSizes, 'h5');
-        height: 100%;
+        height: 50px;
         margin: 0 10px;
 
         &:first-of-type {
@@ -16,6 +28,64 @@
 
         &:last-of-type {
             margin-right: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .nav {
+        &__menu {
+            display: inherit !important;
+            position: relative;
+            right: 0;
+            rotate: 0;
+            top: 0;
+            transition: .3s;
+            transition-timing-function: cubic-bezier(.645, .045, .355, 1);
+
+            &--open {
+                right: 200px;
+                rotate: -90deg;
+                transition: .3s;
+                transition-timing-function: cubic-bezier(.645, .045, .355, 1);
+            }
+        }
+
+        &__links-container {
+            background-color: rgba(variables.$darkGrey, 1);
+            height: 100%;
+            position: fixed;
+            right: -201px;
+            top: 0;
+            transition: .3s;
+            transition-timing-function: cubic-bezier(.645, .045, .355, 1);
+            width: 200px;
+
+            &--open {
+                box-shadow: 20px 0 18px 24px color.scale(variables.$darkGrey, $lightness: -20%);
+                right: 0;
+            }
+
+            &--shadowed {
+                background-color: rgba(variables.$darkGrey, .85);
+            }
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 1.875em 0;
+
+        &__link {
+            display: block !important;
+            margin: 15px 0;
+            width: 100%;
+        }
+
+        &__link:first-of-type {
+            margin-top: 0;
         }
     }
 }
