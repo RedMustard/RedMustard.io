@@ -1,0 +1,35 @@
+.social-media-icon {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__label {
+        animation: label-slide .2s ease-in;
+        font-size: 16px;
+        padding-right: .3125em;
+        position: relative;
+    }
+
+    &__icon {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@keyframes label-slide {
+    0% {
+        opacity: 0;
+        right: -50px;
+    }
+
+    65% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0;
+    }
+}

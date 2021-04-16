@@ -4,6 +4,7 @@ import { App } from '../../interfaces';
 import { sampleAppData } from '../../utils/sample-data';
 import Layout from '../../components/Layout/Layout';
 // import List from '../../components/List';
+import SectionTitle from '../../components/SectionTitle/SectionTitle';
 
 // type Props = {
 //     items?: App[];
@@ -11,9 +12,13 @@ import Layout from '../../components/Layout/Layout';
 
 // const WithStaticProps = ({ items }: Props) => (
 const WithStaticProps = () => (
-    <Layout title="RedMustard.io | Apps">
-        <h1 className="h-h1">Apps</h1>
-        <h3 className="h-h3">Stay tuned!</h3>
+    <Layout title="RedMustard.io | Projects">
+        <SectionTitle>
+            <h1>Projects</h1>
+        </SectionTitle>
+        <SectionTitle>
+            <h3>Stay tuned!</h3>
+        </SectionTitle>
 
         {/* <List items={items} /> */}
 

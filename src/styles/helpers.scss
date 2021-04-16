@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use 'variables';
 
+.h-link,
 .h-link-like {
     background-color: transparent;
     border: 0;
@@ -45,3 +46,33 @@
     font-size: map.get(variables.$fontSizes, 'h6');
     font-weight: 500;
 }
+
+.l-padding-horz-sm {
+    padding-left: .625em !important;
+    padding-right: .625em !important;
+}
+
+.l-padding-horz-md {
+    padding-left: .938em !important;
+    padding-right: .938em !important;
+}
+
+.l-padding-horz-lg {
+    padding-left: 1.875em !important;
+    padding-right: 1.875em !important;
+}
+
+.l-padding-vert-sm {
+    padding-bottom: .625em !important;
+    padding-top: .625em !important;
+}
+
+.l-padding-vert-md {
+    padding-bottom: .938em !important;
+    padding-top: .938em !important;
+}
+
+.l-margin-btm-lg {
+    margin-bottom: 1.875em !important;
+}
+

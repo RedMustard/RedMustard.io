@@ -1,0 +1,13 @@
+@use '../../styles/variables';
+
+$height: 3px;
+
+.section-title {
+    &__border {
+        border-bottom: $height solid variables.$green;
+        display: block;
+        height: $height;
+        max-width: 25px;
+        width: 75%;
+    }
+}

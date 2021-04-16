@@ -5,13 +5,56 @@
 @use '../components/Nav/Nav';
 @use '../components/Header/Header';
 @use '../components/Footer/Footer';
+@use '../components/SectionTitle/SectionTitle';
+@use '../components/SocialIcon/SocialIcon';
 
 body,
 html {
     background-color: variables.$darkGrey;
     color: variables.$white;
     font-family: variables.$fontFamily;
+    font-size: 1em;
     height: 100%;
+    margin: 0;
+}
+
+*:focus {
+    outline: 1px dashed variables.$white;
+}
+
+h1 {
+    font-size: map.get(variables.$fontSizes, 'h1');
+    font-weight: 500;
+    margin: 0;
+}
+
+h2 {
+    font-size: map.get(variables.$fontSizes, 'h2');
+    font-weight: 500;
+    margin: 0;
+}
+
+h3 {
+    font-size: map.get(variables.$fontSizes, 'h3');
+    font-weight: 500;
+    margin: 0;
+}
+
+h4 {
+    font-size: map.get(variables.$fontSizes, 'h4');
+    font-weight: 500;
+    margin: 0;
+}
+
+h5 {
+    font-size: map.get(variables.$fontSizes, 'h5');
+    font-weight: 500;
+    margin: 0;
+}
+
+h6 {
+    font-size: map.get(variables.$fontSizes, 'h6');
+    font-weight: 500;
     margin: 0;
 }
 
