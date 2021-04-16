@@ -1,13 +1,20 @@
+@use 'sass:map';
 @use '../../styles/variables';
 
-$height: 3px;
+$borderHeight: 3px;
+$titleHeight: map.get(variables.$fontSizes, 'h1');
 
 .section-title {
+    & h1 {
+        padding-top: calc(50vh - #{variables.$headerHeight} - #{$titleHeight});
+        position: relative;
+    }
+
     &__border {
-        border-bottom: $height solid variables.$green;
+        border-bottom: $borderHeight solid variables.$green;
         display: block;
-        height: $height;
-        max-width: 25px;
+        height: $borderHeight;
+        max-width: 36px;
         width: 75%;
     }
 }
