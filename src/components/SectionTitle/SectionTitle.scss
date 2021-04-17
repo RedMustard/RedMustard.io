@@ -2,11 +2,12 @@
 @use '../../styles/variables';
 
 $borderHeight: 3px;
-$titleHeight: map.get(variables.$fontSizes, 'h1');
+$desktopTitleHeight: map.get(variables.$desktopFontSizes, 'h1');
+$mobileTitleHeight: map.get(variables.$mobileFontSizes, 'h1');
 
 .section-title {
     & h1 {
-        padding-top: calc(50vh - #{variables.$headerHeight} - #{$titleHeight});
+        padding-top: calc(50vh - #{variables.$desktopHeaderHeight} - calc(#{$desktopTitleHeight} / 2));
         position: relative;
     }
 
@@ -15,6 +16,7 @@ $titleHeight: map.get(variables.$fontSizes, 'h1');
         display: block;
         height: $borderHeight;
         max-width: 36px;
+        padding-top: 3px;
         width: 75%;
     }
 }

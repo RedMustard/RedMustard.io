@@ -3,13 +3,26 @@ import Head from 'next/head';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
+if (typeof window !== 'undefined') {
+    // eslint-disable-next-line global-require
+    require('smooth-scroll')('[data-scroll]', {
+        header: '[data-scroll-header]',
+        easing: 'easeOutCubic',
+        speed: 300,
+    });
+}
+
 type Props = {
     children?: ReactNode;
     className?: string;
     title?: string;
 };
 
-const Layout = ({ children, title = 'RedMustard.io', className = '' }: Props) => (
+const Layout = ({
+    children,
+    title = 'RedMustard.io',
+    className = '',
+}: Props) => (
     <>
         <Head>
             <title>{title}</title>
@@ -22,7 +35,9 @@ const Layout = ({ children, title = 'RedMustard.io', className = '' }: Props) =>
 
         <Header />
 
-        <div className={`content l-padding-horz-lg l-padding-vert-lg ${className}`}>
+        <div
+            className={`content l-padding-horz-lg l-padding-vert-lg ${className}`}
+        >
             {children}
         </div>
 

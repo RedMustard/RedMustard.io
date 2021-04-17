@@ -8,6 +8,7 @@
     color: variables.$green;
     cursor: pointer;
     display: inline-block;
+    text-decoration: none;
 
     &:hover,
     &:focus,
@@ -19,42 +20,42 @@
 
 .h-h1 {
     font-family: variables.$headerFontFamily;
-    font-size: map.get(variables.$fontSizes, 'h1');
+    font-size: map.get(variables.$desktopFontSizes, 'h1');
     font-weight: 500;
     line-height: 1;
 }
 
 .h-h2 {
     font-family: variables.$headerFontFamily;
-    font-size: map.get(variables.$fontSizes, 'h2');
+    font-size: map.get(variables.$desktopFontSizes, 'h2');
     font-weight: 500;
     line-height: 1;
 }
 
 .h-h3 {
     font-family: variables.$headerFontFamily;
-    font-size: map.get(variables.$fontSizes, 'h3');
+    font-size: map.get(variables.$desktopFontSizes, 'h3');
     font-weight: 500;
     line-height: 1;
 }
 
 .h-h4 {
     font-family: variables.$headerFontFamily;
-    font-size: map.get(variables.$fontSizes, 'h4');
+    font-size: map.get(variables.$desktopFontSizes, 'h4');
     font-weight: 500;
     line-height: 1;
 }
 
 .h-h5 {
     font-family: variables.$headerFontFamily;
-    font-size: map.get(variables.$fontSizes, 'h5');
+    font-size: map.get(variables.$desktopFontSizes, 'h5');
     font-weight: 500;
     line-height: 1.5;
 }
 
 .h-h6 {
     font-family: variables.$headerFontFamily;
-    font-size: map.get(variables.$fontSizes, 'h6');
+    font-size: map.get(variables.$desktopFontSizes, 'h6');
     font-weight: 500;
     line-height: 1.5;
 }
@@ -98,5 +99,46 @@
 }
 
 .l-margin-btm-xxl {
-    margin-bottom: 70em !important;
+    margin-bottom: 35em !important;
+}
+
+.l-margin-horz-sm {
+    padding-bottom: .625em !important;
+    padding-top: .625em !important;
+}
+
+@media only screen and (max-width: 500px) {
+    .l-padding-horz-lg {
+        padding-left: .938em !important;
+        padding-right: .938em !important;
+    }
+
+    .l-padding-vert-lg {
+        padding-bottom: .721875em !important;
+        padding-top: .721875em !important;
+    }
+
+    .h-h1 {
+        font-size: map.get(variables.$mobileFontSizes, 'h1');
+    }
+
+    .h-h2 {
+        font-size: map.get(variables.$mobileFontSizes, 'h2');
+    }
+
+    .h-h3 {
+        font-size: map.get(variables.$mobileFontSizes, 'h3');
+    }
+
+    .h-h4 {
+        font-size: map.get(variables.$mobileFontSizes, 'h4');
+    }
+
+    .h-h5 {
+        font-size: map.get(variables.$mobileFontSizes, 'h5');
+    }
+
+    .h-h6 {
+        font-size: map.get(variables.$mobileFontSizes, 'h6');
+    }
 }

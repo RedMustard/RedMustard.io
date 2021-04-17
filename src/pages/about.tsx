@@ -1,25 +1,21 @@
-import Layout from '../components/Layout/Layout';
+import ContentSection from '../components/ContentSection/ContentSection';
 import SectionTitle from '../components/SectionTitle/SectionTitle';
 
+
 const AboutPage = () => (
-    <Layout title="RedMustard.io | About" className="about">
+    <section>
         <SectionTitle>
-            <h1>About me</h1>
+            <h1 id="about">
+                About
+            </h1>
         </SectionTitle>
 
-        {/* <SectionTitle>
-            <h2>Who am I?</h2>
-        </SectionTitle>
-        My name is Travis Barnes and I am a professional software engineer and a hobbyist audio programmer and music producer based in Portland, OR. */}
-
-        {/* <div className="l-margin-btm-lg" />
-
-        <SectionTitle>
-            <h2>What are your interests?</h2>
-        </SectionTitle> */}
-        Stay tuned!
-
-    </Layout>
+        <ContentSection>
+            <p>
+                Cras id ipsum ac odio sodales pharetra sed in dui. Maecenas porttitor sodales urna, a blandit metus rutrum sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus malesuada felis a enim pulvinar facilisis. Pellentesque iaculis interdum metus, quis pellentesque eros rutrum at. Aliquam erat volutpat. Nunc sed odio quis enim ornare pellentesque. Vivamus imperdiet augue vel congue suscipit. Nulla consectetur lacus in turpis blandit semper. Donec in velit vitae dolor lobortis rhoncus. Etiam sed nisi ultrices, sodales odio ut, convallis magna. Aenean ullamcorper lacus nisi, sed rutrum dolor venenatis vel. Sed semper dolor velit, a sodales ex dignissim sit amet. Sed id auctor mi. Nunc lacinia sed tellus viverra aliquet. Nullam augue nibh, varius eu elit eget, ullamcorper dictum tortor.
+            </p>
+        </ContentSection>
+    </section>
 );
 
 export default AboutPage;

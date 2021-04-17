@@ -7,7 +7,6 @@ const Header = () => {
     const [showNav, setShowNav] = useState(true);
     const [isShadowed, setIsShadowed] = useState(false);
     const [scrollPos, setScrollPos] = useState(global.pageYOffset);
-    // let prevScrollpos = global.pageYOffset;
 
     global.onscroll = () => {
         const currentScrollPos = global.pageYOffset;
@@ -25,7 +24,7 @@ const Header = () => {
     };
 
     return (
-        <header className={`header ${showNav ? 'header--visible' : ''} ${isShadowed ? 'header--shadowed' : ''}`}>
+        <header data-scroll-header className={`header ${showNav ? 'header--visible' : ''} ${isShadowed ? 'header--shadowed' : ''}`}>
             <div className="header__container l-padding-horz-lg l-padding-vert-md">
                 <Link href="/">
                     <div className="header__title h-h1">
