@@ -1,6 +1,6 @@
 import Image from 'next/image';
+// import Link from 'next/link';
 import React, { useState } from 'react';
-import Link from 'next/link';
 
 
 const Nav = () => {
@@ -17,28 +17,77 @@ const Nav = () => {
     return (
 
         <nav className="nav">
-            <button
-                type="button"
-                className={`nav__menu h-link-like ${isOpen ? 'nav__menu--open' : ''}`}
-                onClick={handleOnClick}
-            >
-                <Image className="nav__menu-icon l-padding-horz-sm" src="/images/menu.svg" alt="Menu" width="40" height="40" />
-            </button>
+            <div
+                role="none" // TODO: Change?
+                className={`nav__overlay ${isOpen ? 'nav__overlay--open' : ''}`}
+                onMouseDown={handleOnClick}
+            />
+
+            <div className={`nav__menu-container ${isOpen ? 'nav__menu-container--open' : ''}`}>
+                <button
+                    type="button"
+                    className={`nav__menu h-link-like ${isOpen ? 'nav__menu--open' : ''}`}
+                    onClick={handleOnClick}
+                >
+                    {
+                        isOpen
+                            ? <Image className="nav__menu-icon" src="/images/close.svg" alt="Menu" width="25" height="25" />
+                            : <Image className="nav__menu-icon" src="/images/menu.svg" alt="Menu" width="25" height="25" />
+                    }
+                </button>
+            </div>
 
             <div className={`nav__links-container ${isOpen ? 'nav__links-container--open' : ''}`}>
                 <div className="nav-links">
-                    <Link href="/#about">
-                        <button onClick={handleOnClick} type="button" className="nav-links__link h-link-like">About</button>
-                    </Link>
-                    <Link href="/#work">
-                        <button onClick={handleOnClick} type="button" className="nav-links__link h-link-like">Work</button>
-                    </Link>
-                    <Link href="/#projects">
-                        <button onClick={handleOnClick} type="button" className="nav-links__link h-link-like">Projects</button>
-                    </Link>
-                    <Link href="/blog">
-                        <button onClick={handleOnClick} type="button" className="nav-links__link h-link-like">Blog</button>
-                    </Link>
+                    <a
+                        href="/#about"
+                        data-scroll
+                        type="button"
+                        onClick={handleOnClick}
+                        className="nav-links__link h-link"
+                    >
+                        About
+                    </a>
+
+                    <a
+                        href="/#work"
+                        data-scroll
+                        type="button"
+                        onClick={handleOnClick}
+                        className="nav-links__link h-link"
+                    >
+                        Work
+                    </a>
+
+                    <a
+                        href="/#projects"
+                        data-scroll
+                        type="button"
+                        onClick={handleOnClick}
+                        className="nav-links__link h-link"
+                    >
+                        Projects
+                    </a>
+
+                    {/* TODO: Add blog */}
+                    {/*
+                        eslint-disable
+                        jsx-a11y/anchor-is-valid,
+                        jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events
+                    */}
+                    {/* <Link href="/blog">
+                        <a
+                            onClick={handleOnClick}
+                            className="nav-links__link h-link"
+                        >
+                            Blog
+                        </a>
+                    </Link> */}
+                    {/*
+                        eslint-enable
+                        jsx-a11y/anchor-is-valid,
+                        jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events
+                    */}
                 </div>
             </div>
         </nav>

@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: row;
     flex-shrink: 0;
-    min-height: variables.$footerHeight;
     justify-content: center;
+    min-height: variables.$footerHeight;
 
     &__container {
         align-items: flex-end;

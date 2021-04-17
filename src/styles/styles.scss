@@ -18,10 +18,8 @@ html {
     height: 100%;
     line-height: 1.5;
     margin: 0;
-    scroll-behavior: smooth;
     scrollbar-color: variables.$green variables.$darkGrey;
     scrollbar-width: thin;
-    transition-timing-function: ease;
 }
 
 body::-webkit-scrollbar {
@@ -34,7 +32,10 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
     background-color: variables.$green;
-    // outline: 1px solid slategrey;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 *:focus {
@@ -43,7 +44,7 @@ body::-webkit-scrollbar-thumb {
 
 h1 {
     font-family: variables.$headerFontFamily;
-    font-size: map.get(variables.$fontSizes, 'h1');
+    font-size: map.get(variables.$desktopFontSizes, 'h1');
     font-weight: 500;
     line-height: 1;
     margin: 0;
@@ -51,7 +52,7 @@ h1 {
 
 h2 {
     font-family: variables.$headerFontFamily;
-    font-size: map.get(variables.$fontSizes, 'h2');
+    font-size: map.get(variables.$desktopFontSizes, 'h2');
     font-weight: 500;
     line-height: 1;
     margin: 0;
@@ -59,7 +60,7 @@ h2 {
 
 h3 {
     font-family: variables.$headerFontFamily;
-    font-size: map.get(variables.$fontSizes, 'h3');
+    font-size: map.get(variables.$desktopFontSizes, 'h3');
     font-weight: 500;
     line-height: 1;
     margin: 0;
@@ -67,7 +68,7 @@ h3 {
 
 h4 {
     font-family: variables.$headerFontFamily;
-    font-size: map.get(variables.$fontSizes, 'h4');
+    font-size: map.get(variables.$desktopFontSizes, 'h4');
     font-weight: 500;
     line-height: 1;
     margin: 0;
@@ -75,7 +76,7 @@ h4 {
 
 h5 {
     font-family: variables.$headerFontFamily;
-    font-size: map.get(variables.$fontSizes, 'h5');
+    font-size: map.get(variables.$desktopFontSizes, 'h5');
     font-weight: 500;
     line-height: 1.5;
     margin: 0;
@@ -83,7 +84,7 @@ h5 {
 
 h6 {
     font-family: variables.$headerFontFamily;
-    font-size: map.get(variables.$fontSizes, 'h6');
+    font-size: map.get(variables.$desktopFontSizes, 'h6');
     font-weight: 500;
     line-height: 1.5;
     margin: 0;
@@ -93,4 +94,30 @@ h6 {
     display: flex;
     flex-direction: column;
     height: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+    h1 {
+        font-size: map.get(variables.$mobileFontSizes, 'h1');
+    }
+
+    h2 {
+        font-size: map.get(variables.$mobileFontSizes, 'h2');
+    }
+
+    h3 {
+        font-size: map.get(variables.$mobileFontSizes, 'h3');
+    }
+
+    h4 {
+        font-size: map.get(variables.$mobileFontSizes, 'h4');
+    }
+
+    h5 {
+        font-size: map.get(variables.$mobileFontSizes, 'h5');
+    }
+
+    h6 {
+        font-size: map.get(variables.$mobileFontSizes, 'h6');
+    }
 }

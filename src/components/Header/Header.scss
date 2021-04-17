@@ -2,15 +2,18 @@
 @use 'sass:map';
 @use '../../styles/variables';
 
+$desktopHeaderHeight: variables.$desktopHeaderHeight;
+$mobileHeaderHeight: variables.$mobileHeaderHeight;
+
 .header {
     background-color: rgba(variables.$darkGrey, 1);
     display: flex;
     flex-direction: row;
     justify-content: center;
     left: 0;
-    min-height: variables.$headerHeight;
+    min-height: $desktopHeaderHeight;
     position: fixed;
-    top: calc(0px - #{variables.$headerHeight} - 30px);
+    top: calc(0px - #{$desktopHeaderHeight} - 30px);
     transition: .3s;
     transition-timing-function: cubic-bezier(.645, .045, .355, 1);
     width: 100%;
@@ -39,11 +42,25 @@
 
     &--visible {
         top: 0;
-        // transition: .5s;
     }
 
     &--shadowed {
-        background-color: rgba(variables.$darkGrey, .85);
+        background-color: rgba(variables.$darkGrey, .95);
         box-shadow: 0 -220px 18px 224px color.scale(variables.$darkGrey, $lightness: -20%);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .header {
+        min-height: $mobileHeaderHeight;
+        top: calc(0px - #{$mobileHeaderHeight} - 30px);
+
+        &__container {
+            align-items: center;
+        }
+
+        &--visible {
+            top: 0;
+        }
     }
 }
