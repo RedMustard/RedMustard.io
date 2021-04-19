@@ -8,6 +8,12 @@ const Nav = () => {
 
     const handleOnClick = () => {
         setIsOpen(!isOpen);
+
+        if (!isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
     };
 
     return (
@@ -17,7 +23,7 @@ const Nav = () => {
                 role="none" // TODO: Change?
                 className={`nav__overlay ${isOpen ? 'nav__overlay--open' : ''}`}
                 onMouseDown={handleOnClick}
-                onTouchMove={handleOnClick}
+                onTouchStart={handleOnClick}
             />
 
             <div className={`nav__menu-container ${isOpen ? 'nav__menu-container--open' : ''}`}>
