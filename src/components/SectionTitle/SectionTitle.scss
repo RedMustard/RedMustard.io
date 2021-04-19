@@ -6,6 +6,7 @@ $desktopTitleHeight: map.get(variables.$desktopFontSizes, 'h1');
 $mobileTitleHeight: map.get(variables.$mobileFontSizes, 'h1');
 
 .section-title {
+
     & h1 {
         padding-top: calc(50vh - #{variables.$desktopHeaderHeight} - calc(#{$desktopTitleHeight} / 2));
         position: relative;

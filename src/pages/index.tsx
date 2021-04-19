@@ -13,11 +13,8 @@ const IndexPage = () => {
             </SectionTitle>
 
             <ContentSection>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas libero velit, imperdiet id sagittis quis, rutrum nec neque. Sed tortor augue, laoreet a varius vitae, laoreet et erat. Curabitur non euismod est. Quisque mattis nunc odio. Phasellus pulvinar mi at tristique convallis. Fusce quis mi maximus, semper eros non, hendrerit turpis. In cursus nisl id ante aliquam, ut elementum quam auctor.
-                </p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas libero velit, imperdiet id sagittis quis, rutrum nec neque. Sed tortor augue, laoreet a varius vitae, laoreet et erat. Curabitur non euismod est. Quisque mattis nunc odio. Phasellus pulvinar mi at tristique convallis. Fusce quis mi maximus, semper eros non, hendrerit turpis. In cursus nisl id ante aliquam, ut elementum quam auctor.
             </ContentSection>
-
 
             <AboutPage />
 

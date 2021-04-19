@@ -3,7 +3,7 @@ import ContentSection from '../../components/ContentSection/ContentSection';
 
 
 const WorkPage = () => (
-    <section>
+    <>
         <SectionTitle>
             <h1 id="work">
                 Work
@@ -18,7 +18,7 @@ const WorkPage = () => (
                 Phasellus commodo, neque nec ultrices scelerisque, tortor augue fermentum velit, vitae congue urna felis vitae arcu. Curabitur sit amet erat orci. Pellentesque non rhoncus elit. Duis sed ipsum mauris. Nullam quis ultricies erat. Curabitur commodo ligula vel vulputate volutpat. Donec pulvinar posuere urna, nec euismod purus euismod sit amet. Donec sit amet mi tellus. Vestibulum tristique nulla sit amet faucibus tincidunt. Suspendisse tortor velit, pellentesque ac eros sit amet, maximus sodales sapien. Sed ante velit, viverra a felis at, vehicula tristique magna. Cras at gravida odio, ut tempor lectus. Ut consectetur in urna ac dapibus. Duis eget nunc vel augue pretium lacinia.
             </p>
         </ContentSection>
-    </section>
+    </>
 );
 
 

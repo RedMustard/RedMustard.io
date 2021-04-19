@@ -6,9 +6,9 @@ interface ContentSectionProps {
 }
 
 const ContentSection = ({ children, className = '' }: ContentSectionProps) => (
-    <div className={`content-section l-margin-btm-xxl ${className}`}>
+    <section className={`content-section l-margin-btm-xxl ${className}`}>
         {children}
-    </div>
+    </section>
 );
 
 export default ContentSection;
