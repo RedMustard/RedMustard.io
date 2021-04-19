@@ -1,17 +1,13 @@
 import Image from 'next/image';
-// import Link from 'next/link';
 import React, { useState } from 'react';
+import SocialIcon from '../SocialIcon/SocialIcon';
 
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleOnClick = () => {
-        if (isOpen) {
-            setIsOpen(false);
-        } else {
-            setIsOpen(true);
-        }
+        setIsOpen(!isOpen);
     };
 
     return (
@@ -21,6 +17,7 @@ const Nav = () => {
                 role="none" // TODO: Change?
                 className={`nav__overlay ${isOpen ? 'nav__overlay--open' : ''}`}
                 onMouseDown={handleOnClick}
+                onTouchMove={handleOnClick}
             />
 
             <div className={`nav__menu-container ${isOpen ? 'nav__menu-container--open' : ''}`}>
@@ -31,8 +28,8 @@ const Nav = () => {
                 >
                     {
                         isOpen
-                            ? <Image className="nav__menu-icon" src="/images/close.svg" alt="Menu" width="25" height="25" />
-                            : <Image className="nav__menu-icon" src="/images/menu.svg" alt="Menu" width="25" height="25" />
+                            ? <img className="nav__menu-icon" src="/images/close.svg" alt="Close" width="25" height="25" />
+                            : <img className="nav__menu-icon" src="/images/menu.svg" alt="Menu" width="25" height="25" />
                     }
                 </button>
             </div>
@@ -88,6 +85,20 @@ const Nav = () => {
                         jsx-a11y/anchor-is-valid,
                         jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events
                     */}
+                </div>
+
+                <div className="nav-social-links">
+                    <SocialIcon href="https://github.com/RedMustard" label="GitHub" className="nav-social-links__link">
+                        <Image className="nav-social-links__icon" src="/images/github.svg" alt="GitHub" width="25" height="25" />
+                    </SocialIcon>
+
+                    <SocialIcon href="https://www.linkedin.com/in/redmustard" label="LinkedIn" className="nav-social-links__link">
+                        <Image className="nav-social-links__icon" src="/images/linkedin.svg" alt="GitHub" width="25" height="25" />
+                    </SocialIcon>
+
+                    <SocialIcon href="mailto:travis@redmustard.io" label="E-Mail" className="nav-social-links__link">
+                        <Image className="nav-social-links__icon" src="/images/mail.svg" alt="GitHub" width="25" height="25" />
+                    </SocialIcon>
                 </div>
             </div>
         </nav>

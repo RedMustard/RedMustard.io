@@ -1,2 +1,15 @@
+@use 'sass:color';
+@use '../../styles/variables.scss';
+
 .content-section {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: variables.$contentWidth;
+    width: 100%;
 }
+

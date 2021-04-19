@@ -5,14 +5,20 @@ interface IconLinkProps {
     children: JSX.Element;
     href: string;
     label: string;
+    className?: string;
 }
 
-const IconLink = ({ children, href, label }: IconLinkProps) => {
+const IconLink = ({
+    children,
+    href,
+    label,
+    className = '',
+}: IconLinkProps) => {
     const [showText, setShowText] = useState(false);
 
     return (
         <div className="social-media-icon">
-            <div className="social-media-icon__icon">
+            <div className={`social-media-icon__icon ${className}`}>
                 { showText
                     ? <span className="social-media-icon__label">{label}</span>
                     : null

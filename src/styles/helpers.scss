@@ -15,6 +15,7 @@
     &:active {
         color: variables.$lightGrey;
         transition: .125s;
+        transition-timing-function: cubic-bezier(.645, .045, .355, 1);
     }
 }
 
@@ -116,6 +117,10 @@
     .l-padding-vert-lg {
         padding-bottom: .721875em !important;
         padding-top: .721875em !important;
+    }
+
+    .l-margin-btm-xxl {
+        margin-bottom: 17.5em !important;
     }
 
     .h-h1 {
