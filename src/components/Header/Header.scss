@@ -53,7 +53,7 @@ $mobileHeaderHeight: variables.$mobileHeaderHeight;
 @media only screen and (max-width: 500px) {
     .header {
         min-height: $mobileHeaderHeight;
-        top: calc(0px - #{$mobileHeaderHeight} - 30px);
+        top: calc(0px - #{$mobileHeaderHeight} - 40px);
 
         &__container {
             align-items: center;

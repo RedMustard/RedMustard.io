@@ -4,13 +4,12 @@ import ContentSection from '../../components/ContentSection/ContentSection';
 
 const WorkPage = () => (
     <>
-        <SectionTitle>
-            <h1 id="work">
-                Work
-            </h1>
-        </SectionTitle>
-
-        <ContentSection>
+        <ContentSection sectionId="work">
+            <SectionTitle>
+                <h1>
+                    Work
+                </h1>
+            </SectionTitle>
             <p>
                 Sed nec massa ac ante semper porta. Etiam odio dui, faucibus a tincidunt vel, rhoncus id risus. Maecenas vitae diam ut libero posuere venenatis. Praesent at commodo lacus, at dignissim orci. Mauris tortor enim, imperdiet non nisl ut, convallis varius magna. Aliquam iaculis mauris eros, sit amet semper nibh lobortis in. Maecenas metus enim, venenatis malesuada posuere sit amet, imperdiet ut libero. Donec cursus nisi dui, ultrices pulvinar ante tristique sed. Vivamus eu felis nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus, libero eu volutpat euismod, urna eros pulvinar magna, in elementum mi lacus id sem.
             </p>

@@ -6,7 +6,6 @@ import Header from '../Header/Header';
 if (typeof window !== 'undefined') {
     // eslint-disable-next-line global-require
     require('smooth-scroll')('[data-scroll]', {
-        header: '[data-scroll-header]',
         easing: 'easeOutCubic',
         speed: 300,
     });

@@ -2,11 +2,12 @@ import React from 'react';
 
 interface ContentSectionProps {
     children: any;
+    sectionId: string;
     className?: string;
 }
 
-const ContentSection = ({ children, className = '' }: ContentSectionProps) => (
-    <section className={`content-section l-margin-btm-xxl ${className}`}>
+const ContentSection = ({ children, sectionId, className = '' }: ContentSectionProps) => (
+    <section id={sectionId} className={`content-section l-padding-horz-lg ${className}`}>
         {children}
     </section>
 );
