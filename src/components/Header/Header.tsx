@@ -31,7 +31,7 @@ const Header = () => {
                         RedMustard
                     </div>
                 </Link>
-                <div className="header__nav h-h4">
+                <div className="header__nav h-h3">
                     <Nav />
                 </div>
             </div>

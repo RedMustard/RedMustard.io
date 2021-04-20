@@ -5,14 +5,33 @@ import SocialIcon from '../SocialIcon/SocialIcon';
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [touchStartPosX, setTouchStartPosX] = useState<number>();
 
     const handleOnClick = () => {
         setIsOpen(!isOpen);
 
-        if (!isOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
+        // if (!isOpen) {
+        //     document.body.style.overflow = 'hidden';
+        // } else {
+        //     document.body.style.overflow = 'auto';
+        // }
+    };
+
+    const handleOnTouchStart = (e: React.TouchEvent) => {
+        setTouchStartPosX(e.targetTouches[0].clientX);
+    };
+
+    const handleOnTouchEnd = (e: React.TouchEvent) => {
+        const touchEndPosX = e.changedTouches[0].clientX;
+
+        if (touchStartPosX && touchEndPosX > touchStartPosX) {
+            setIsOpen(!isOpen);
+
+            // if (!isOpen) {
+            //     document.body.style.overflow = 'hidden';
+            // } else {
+            //     document.body.style.overflow = 'auto';
+            // }
         }
     };
 
@@ -20,10 +39,11 @@ const Nav = () => {
 
         <nav className="nav">
             <div
-                role="none" // TODO: Change?
+                role="presentation"
                 className={`nav__overlay ${isOpen ? 'nav__overlay--open' : ''}`}
                 onMouseDown={handleOnClick}
-                onTouchStart={handleOnClick}
+                onTouchStartCapture={handleOnTouchStart}
+                onTouchEndCapture={handleOnTouchEnd}
             />
 
             <div className={`nav__menu-container ${isOpen ? 'nav__menu-container--open' : ''}`}>
@@ -40,7 +60,11 @@ const Nav = () => {
                 </button>
             </div>
 
-            <div className={`nav__links-container ${isOpen ? 'nav__links-container--open' : ''}`}>
+            <div
+                className={`nav__links-container ${isOpen ? 'nav__links-container--open' : ''}`}
+                onTouchStartCapture={handleOnTouchStart}
+                onTouchEndCapture={handleOnTouchEnd}
+            >
                 <div className="nav-links">
                     <a
                         href="/#about"
@@ -70,6 +94,16 @@ const Nav = () => {
                         className="nav-links__link h-link"
                     >
                         Projects
+                    </a>
+
+                    <a
+                        href="/resume"
+                        data-scroll
+                        type="button"
+                        onClick={handleOnClick}
+                        className="nav-links__link h-link"
+                    >
+                        Resume
                     </a>
 
                     {/* TODO: Add blog */}
