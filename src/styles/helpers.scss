@@ -113,8 +113,13 @@
 }
 
 .l-margin-horz-sm {
-    padding-bottom: .625rem !important;
-    padding-top: .625rem !important;
+    margin-left: .625rem !important;
+    margin-right: .625rem !important;
+}
+
+.l-margin-vert-sm {
+    margin-bottom: .625rem !important;
+    margin-top: .625rem !important;
 }
 
 @media only screen and (max-width: 31.25em) {
