@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 import { GitHubIcon } from '../Icons/GitHub';
 import { LinkedInIcon } from '../Icons/LinkedIn';
