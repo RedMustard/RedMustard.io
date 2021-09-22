@@ -18,17 +18,18 @@ const IconLink = ({
 
     return (
         <div className="social-media-icon">
-            <div className={`social-media-icon__icon ${className}`}>
+            <div className={`social-media-icon__icon ${className} l-padding-vert-sm`}>
                 { showText
                     ? <span className="social-media-icon__label">{label}</span>
                     : null
                 }
 
                 <a
-                    className="h-link"
+                    className="social-media-icon__link h-link"
                     target="_blank"
                     rel="noreferrer"
                     href={href}
+                    tabIndex={0}
                     onFocus={() => setShowText(true)}
                     onBlur={() => setShowText(false)}
                     onMouseOver={() => setShowText(true)}

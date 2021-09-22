@@ -13,7 +13,7 @@ $mobileHeaderHeight: variables.$mobileHeaderHeight;
     left: 0;
     min-height: $desktopHeaderHeight;
     position: fixed;
-    top: calc(0px - #{$desktopHeaderHeight} - 30px);
+    top: calc(0rem - #{$desktopHeaderHeight} - 1.875rem);
     transition: .3s;
     transition-timing-function: cubic-bezier(.645, .045, .355, 1);
     width: 100%;
@@ -31,8 +31,9 @@ $mobileHeaderHeight: variables.$mobileHeaderHeight;
     &__title {
         cursor: pointer;
 
-        &:hover {
+        &:hover svg path {
             color: variables.$green;
+            fill: variables.$green;
             transition: .2s;
         }
     }
@@ -46,14 +47,14 @@ $mobileHeaderHeight: variables.$mobileHeaderHeight;
 
     &--shadowed {
         background-color: rgba(variables.$darkGrey, .95);
-        box-shadow: 0 -220px 18px 224px color.scale(variables.$darkGrey, $lightness: -20%);
+        box-shadow: 0 -13.75rem 1.125rem 14rem color.scale(variables.$darkGrey, $lightness: -20%);
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 31.25em) {
     .header {
         min-height: $mobileHeaderHeight;
-        top: calc(0px - #{$mobileHeaderHeight} - 40px);
+        top: calc(0rem - #{$mobileHeaderHeight} - 2.5rem);
 
         &__container {
             align-items: center;

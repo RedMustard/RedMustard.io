@@ -7,7 +7,7 @@ import WorkPage from './work';
 
 const IndexPage = () => {
     return (
-        <Layout title="RedMustard.io" className="home">
+        <Layout title="redmustard.io | home" className="home">
 
             <ContentSection sectionId="intro">
                 <SectionTitle>

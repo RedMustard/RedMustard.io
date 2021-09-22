@@ -33,11 +33,11 @@
         flex-direction: column;
         justify-content: center;
         position: fixed;
-        right: 0;
+        right: .9375rem;
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 31.25em) {
     .footer {
         &__container {
             flex-direction: column;
@@ -46,7 +46,7 @@
         &__social-media-icons {
             flex-direction: row;
             margin: 0 auto;
-            padding-bottom: 10px;
+            padding-bottom: .625rem;
             position: inherit;
         }
     }

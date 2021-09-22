@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Nav from '../Nav/Nav';
+import { LogoIcon } from '../Icons/Logo';
 
 
 const Header = () => {
@@ -28,7 +29,7 @@ const Header = () => {
             <div className="header__container l-padding-horz-lg l-padding-vert-md">
                 <Link href="/">
                     <div className="header__title h-h1">
-                        RedMustard
+                        <LogoIcon />
                     </div>
                 </Link>
                 <div className="header__nav h-h3">
