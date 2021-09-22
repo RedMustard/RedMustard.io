@@ -18,7 +18,7 @@ const IconLink = ({
 
     return (
         <div className="social-media-icon">
-            <div className={`social-media-icon__icon ${className} l-padding-vert-sm`}>
+            <div className={`social-media-icon__icon l-margin-vert-sm l-margin-horz-sm ${className}`}>
                 { showText
                     ? <span className="social-media-icon__label">{label}</span>
                     : null

@@ -1,6 +1,10 @@
-import Image from 'next/image';
 import React, { useState } from 'react';
 import SocialIcon from '../SocialIcon/SocialIcon';
+import { CloseIcon } from '../Icons/Close';
+import { MenuIcon } from '../Icons/Menu';
+import { GitHubIcon } from '../Icons/GitHub';
+import { LinkedInIcon } from '../Icons/LinkedIn';
+import { MailIcon } from '../Icons/Mail';
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -59,21 +63,9 @@ const Nav = () => {
                     onClick={handleOnClick}
                 >
                     {isOpen ? (
-                        <img
-                            className="nav__menu-icon"
-                            src="/images/close.svg"
-                            alt="Close"
-                            width="25"
-                            height="25"
-                        />
+                        <CloseIcon />
                     ) : (
-                        <img
-                            className="nav__menu-icon"
-                            src="/images/menu.svg"
-                            alt="Menu"
-                            width="25"
-                            height="25"
-                        />
+                        <MenuIcon />
                     )}
                 </button>
             </div>
@@ -153,13 +145,7 @@ const Nav = () => {
                         label="GitHub"
                         className="nav-social-links__link"
                     >
-                        <Image
-                            className="nav-social-links__icon"
-                            src="/images/github.svg"
-                            alt="GitHub"
-                            width="25"
-                            height="25"
-                        />
+                        <GitHubIcon />
                     </SocialIcon>
 
                     <SocialIcon
@@ -167,13 +153,7 @@ const Nav = () => {
                         label="LinkedIn"
                         className="nav-social-links__link"
                     >
-                        <Image
-                            className="nav-social-links__icon"
-                            src="/images/linkedin.svg"
-                            alt="GitHub"
-                            width="25"
-                            height="25"
-                        />
+                        <LinkedInIcon />
                     </SocialIcon>
 
                     <SocialIcon
@@ -181,13 +161,7 @@ const Nav = () => {
                         label="E-Mail"
                         className="nav-social-links__link"
                     >
-                        <Image
-                            className="nav-social-links__icon"
-                            src="/images/mail.svg"
-                            alt="GitHub"
-                            width="25"
-                            height="25"
-                        />
+                        <MailIcon />
                     </SocialIcon>
                 </div>
             </div>
