@@ -35,3 +35,7 @@ $mobileFontSizes: (
     'h5': .875rem,
     'h6': .5rem,
 );
+
+$animationTiming: (
+    'cubic-bezier': cubic-bezier(.645, .045, .355, 1),
+)

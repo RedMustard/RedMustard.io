@@ -78,7 +78,7 @@
             display: inherit;
             opacity: 0;
             transition: .3s;
-            transition-timing-function: cubic-bezier(.645, .045, .355, 1);
+            transition-timing-function: map.get(variables.$animationTiming, 'cubic-bezier');
             visibility: hidden;
 
             &--open {
@@ -88,9 +88,10 @@
         }
 
         &__menu {
-            height: 1.5625rem;
+            display: flex;
+            height: 1.5rem;
             padding: 0;
-            width: 1.5625rem;
+            width: 1.5rem;
         }
 
         &__links-container {
@@ -103,7 +104,7 @@
             right: -12.5625rem;
             top: 0;
             transition: .3s;
-            transition-timing-function: cubic-bezier(.645, .045, .355, 1);
+            transition-timing-function: map.get(variables.$animationTiming, 'cubic-bezier');
             width: 12.5rem;
 
             &--open {

@@ -15,7 +15,7 @@
     &:active {
         color: variables.$lightGrey;
         transition: .125s;
-        transition-timing-function: cubic-bezier(.645, .045, .355, 1);
+        transition-timing-function: map.get(variables.$animationTiming, 'cubic-bezier');
     }
 }
 
