@@ -13,15 +13,12 @@ const Footer = () => {
                 <div className="footer__social-media-icons">
                     <SocialIcon href="https://github.com/RedMustard" label="GitHub">
                         <GitHubIcon />
-                        {/* <Image className="social-media-icons__icon l-margin-horz-sm" src="/images/github.svg" alt="GitHub" width="40" height="40" /> */}
                     </SocialIcon>
                     <SocialIcon href="https://www.linkedin.com/in/redmustard" label="LinkedIn">
                         <LinkedInIcon />
-                        {/* <Image className="social-media-icons__icon l-margin-horz-sm" src="/images/linkedin.svg" alt="GitHub" width="40" height="40" /> */}
                     </SocialIcon>
                     <SocialIcon href="mailto:travis@redmustard.io" label="E-Mail">
                         <MailIcon />
-                        {/* <Image className="social-media-icons__icon l-margin-horz-sm" src="/images/mail.svg" alt="GitHub" width="40" height="40" /> */}
                     </SocialIcon>
                 </div>
                 <div className="footer__copyright">
