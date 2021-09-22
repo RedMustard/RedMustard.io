@@ -8,13 +8,14 @@
 @use '../components/SectionTitle/SectionTitle';
 @use '../components/SocialIcon/SocialIcon';
 @use '../components/ContentSection/ContentSection';
+@use '../components/Icons/Icons';
 
 body,
 html {
     background-color: variables.$darkGrey;
     color: variables.$white;
     font-family: variables.$fontFamily;
-    font-size: 1em;
+    font-size: 1rem;
     height: 100%;
     line-height: 1.5;
     margin: 0;
@@ -23,7 +24,7 @@ html {
 }
 
 body::-webkit-scrollbar {
-    width: .375em;
+    width: .375rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -39,7 +40,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 *:focus {
-    outline: 1px dashed variables.$white;
+    outline: .0625rem dashed variables.$white;
 }
 
 h1 {
@@ -96,7 +97,7 @@ h6 {
     height: 100%;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 31.25rem) {
     h1 {
         font-size: map.get(variables.$mobileFontSizes, 'h1');
     }

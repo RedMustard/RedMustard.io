@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use '../../styles/variables';
 
-$borderHeight: 3px;
+$borderHeight: .1875rem;
 $desktopTitleHeight: map.get(variables.$desktopFontSizes, 'h1');
 $mobileTitleHeight: map.get(variables.$mobileFontSizes, 'h1');
 
@@ -14,8 +14,8 @@ $mobileTitleHeight: map.get(variables.$mobileFontSizes, 'h1');
         border-bottom: $borderHeight solid variables.$green;
         display: block;
         height: $borderHeight;
-        max-width: 36px;
-        padding-top: 3px;
+        max-width: 2.25rem;
+        padding-top: .1875rem;
         width: 75%;
     }
 }

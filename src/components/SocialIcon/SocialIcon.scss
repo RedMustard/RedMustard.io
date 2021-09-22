@@ -6,22 +6,29 @@
 
     &__label {
         animation: label-slide .2s ease-in;
-        font-size: 14px;
-        padding-right: .3125em;
+        font-size: .875rem;
+        padding-right: .3125rem;
         position: relative;
+        z-index: -1;
     }
 
     &__icon {
         align-items: center;
+        cursor: pointer;
         display: flex;
         justify-content: center;
+        z-index: 1;
+    }
+
+    &__link {
+        display: flex;
     }
 }
 
 @keyframes label-slide {
     0% {
         opacity: 0;
-        right: -50px;
+        right: -3.125rem;
     }
 
     65% {
@@ -34,7 +41,7 @@
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 31.25em) {
     .social-media-icon {
         &__label {
             display: none;

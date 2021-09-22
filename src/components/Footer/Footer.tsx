@@ -1,5 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
+import { GitHubIcon } from '../Icons/GitHub';
+import { LinkedInIcon } from '../Icons/LinkedIn';
+import { MailIcon } from '../Icons/Mail';
 import SocialIcon from '../SocialIcon/SocialIcon';
 
 const Footer = () => {
@@ -9,13 +12,13 @@ const Footer = () => {
             <div className="footer__container l-padding-horz-lg l-padding-vert-md">
                 <div className="footer__social-media-icons">
                     <SocialIcon href="https://github.com/RedMustard" label="GitHub">
-                        <Image className="social-media-icons__icon l-margin-horz-sm" src="/images/github.svg" alt="GitHub" width="40" height="40" />
+                        <GitHubIcon />
                     </SocialIcon>
                     <SocialIcon href="https://www.linkedin.com/in/redmustard" label="LinkedIn">
-                        <Image className="social-media-icons__icon l-margin-horz-sm" src="/images/linkedin.svg" alt="GitHub" width="40" height="40" />
+                        <LinkedInIcon />
                     </SocialIcon>
                     <SocialIcon href="mailto:travis@redmustard.io" label="E-Mail">
-                        <Image className="social-media-icons__icon l-margin-horz-sm" src="/images/mail.svg" alt="GitHub" width="40" height="40" />
+                        <MailIcon />
                     </SocialIcon>
                 </div>
                 <div className="footer__copyright">
