@@ -15,7 +15,7 @@ $mobileHeaderHeight: variables.$mobileHeaderHeight;
     position: fixed;
     top: calc(0rem - #{$desktopHeaderHeight} - 1.875rem);
     transition: .3s;
-    transition-timing-function: cubic-bezier(.645, .045, .355, 1);
+    transition-timing-function: map.get(variables.$animationTiming, 'cubic-bezier');
     width: 100%;
     z-index: 1;
 
@@ -28,13 +28,17 @@ $mobileHeaderHeight: variables.$mobileHeaderHeight;
         width: 100%;
     }
 
-    &__title {
+    &__logo {
+        align-items: center;
         cursor: pointer;
+        display: flex;
+        height: 100%;
 
         &:hover svg path {
             color: variables.$green;
             fill: variables.$green;
             transition: .2s;
+            transition-timing-function: map.get(variables.$animationTiming, 'cubic-bezier');
         }
     }
 

@@ -28,7 +28,7 @@ const Header = () => {
         <header data-scroll-header className={`header ${showNav ? 'header--visible' : ''} ${isShadowed ? 'header--shadowed' : ''}`}>
             <div className="header__container l-padding-horz-lg l-padding-vert-md">
                 <Link href="/">
-                    <div className="header__title h-h1">
+                    <div className="header__logo">
                         <LogoIcon />
                     </div>
                 </Link>
