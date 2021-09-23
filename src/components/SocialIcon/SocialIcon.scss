@@ -1,49 +1,91 @@
-.social-media-icon {
-    align-items: flex-end;
+.social-icon {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    position: relative;
+
+    &--horizontal {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &--vertical {
+        align-items: center;
+        justify-content: flex-end;
+    }
 
     &__label {
-        animation: label-slide .2s ease-in;
+        cursor: pointer;
         font-size: .875rem;
-        padding-right: .3125rem;
-        position: relative;
-        z-index: -1;
+        position: absolute;
+        z-index: 0;
+
+        &--vertical {
+            animation: label-slide-vert .2s ease-in;
+            padding-right: .3125rem;
+            right: 25px;
+        }
+
+        &--horizontal {
+            animation: label-slide-horz .2s ease-in;
+            padding-top: .3125rem;
+            top: 25px;
+        }
     }
 
-    &__icon {
-        align-items: center;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-    }
+//     &__icon {
+//         // align-items: center;
+//         cursor: pointer;
+//         display: flex;
+//         // justify-content: center;
+
+//         &--horizontal {
+//             flex-direction: column;
+//         }
+
+//         &--vertical {
+//             flex-direction: row;
+//         }
+//     }
 
     &__link {
         display: flex;
     }
 }
 
-@keyframes label-slide {
+@keyframes label-slide-horz {
     0% {
         opacity: 0;
-        right: -3.125rem;
+        top: -3.125rem;
     }
 
-    65% {
+    75% {
         opacity: 0;
     }
 
     100% {
         opacity: 1;
-        right: 0;
+        // top: -75px;
     }
 }
 
-@media only screen and (max-width: 31.25em) {
-    .social-media-icon {
-        &__label {
-            display: none;
-        }
+@keyframes label-slide-vert {
+    0% {
+        opacity: 0;
+        right: -3.125rem;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
+
+// @media only screen and (max-width: 31.25em) {
+//     .social-icon {
+//         &__label {
+//             display: none;
+//         }
+//     }
+// }

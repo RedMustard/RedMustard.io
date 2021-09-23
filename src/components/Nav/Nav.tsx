@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import SocialIcon from '../SocialIcon/SocialIcon';
 import { CloseIcon } from '../Icons/Close';
 import { MenuIcon } from '../Icons/Menu';
-import { GitHubIcon } from '../Icons/GitHub';
-import { LinkedInIcon } from '../Icons/LinkedIn';
-import { MailIcon } from '../Icons/Mail';
+import SocialIcons from '../SocialIcons/SocialIcons';
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -50,16 +47,10 @@ const Nav = () => {
                 onTouchEndCapture={handleOnTouchEnd}
             />
 
-            <div
-                className={`nav__menu-container ${
-                    isOpen ? 'nav__menu-container--open' : ''
-                }`}
-            >
+            <div className={`nav__menu-container ${isOpen ? 'nav__menu-container--open' : ''}`}>
                 <button
                     type="button"
-                    className={`nav__menu h-link-like ${
-                        isOpen ? 'nav__menu--open' : ''
-                    }`}
+                    className={`nav__menu h-link-like ${isOpen ? 'nav__menu--open' : ''}`}
                     onClick={handleOnClick}
                 >
                     {isOpen ? (
@@ -71,9 +62,7 @@ const Nav = () => {
             </div>
 
             <div
-                className={`nav__links-container ${
-                    isOpen ? 'nav__links-container--open' : ''
-                }`}
+                className={`nav__links-container ${isOpen ? 'nav__links-container--open' : ''}`}
                 onTouchStartCapture={handleOnTouchStart}
                 onTouchEndCapture={handleOnTouchEnd}
             >
@@ -140,29 +129,7 @@ const Nav = () => {
                 </div>
 
                 <div className="nav-social-links">
-                    <SocialIcon
-                        href="https://github.com/RedMustard"
-                        label="GitHub"
-                        className="nav-social-links__link"
-                    >
-                        <GitHubIcon />
-                    </SocialIcon>
-
-                    <SocialIcon
-                        href="https://www.linkedin.com/in/redmustard"
-                        label="LinkedIn"
-                        className="nav-social-links__link"
-                    >
-                        <LinkedInIcon />
-                    </SocialIcon>
-
-                    <SocialIcon
-                        href="mailto:travis@redmustard.io"
-                        label="E-Mail"
-                        className="nav-social-links__link"
-                    >
-                        <MailIcon />
-                    </SocialIcon>
+                    <SocialIcons displayType="horizontal" />
                 </div>
             </div>
         </nav>

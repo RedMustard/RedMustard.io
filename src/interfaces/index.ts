@@ -10,3 +10,5 @@ export type App = {
     thumbnail?: string;
     url?: string;
 };
+
+export type SocialIconsDisplayType = 'horizontal' | 'vertical';

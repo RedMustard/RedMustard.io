@@ -122,6 +122,26 @@
     margin-top: .625rem !important;
 }
 
+.l-margin-horz-md {
+    margin-left: .9375rem !important;
+    margin-right: .9375rem !important;
+}
+
+.l-margin-vert-md {
+    margin-bottom: .9375rem !important;
+    margin-top: .9375rem !important;
+}
+
+.l-margin-horz-lg {
+    margin-left: 1.5625rem !important;
+    margin-right: 1.5625rem !important;
+}
+
+.l-margin-vert-lg {
+    margin-bottom: 1.5625rem !important;
+    margin-top: 1.5625rem !important;
+}
+
 @media only screen and (max-width: 31.25em) {
     .l-padding-horz-lg {
         padding-left: .938rem !important;
