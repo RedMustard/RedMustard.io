@@ -31,21 +31,6 @@
         }
     }
 
-//     &__icon {
-//         // align-items: center;
-//         cursor: pointer;
-//         display: flex;
-//         // justify-content: center;
-
-//         &--horizontal {
-//             flex-direction: column;
-//         }
-
-//         &--vertical {
-//             flex-direction: row;
-//         }
-//     }
-
     &__link {
         display: flex;
     }
@@ -63,7 +48,6 @@
 
     100% {
         opacity: 1;
-        // top: -75px;
     }
 }
 
@@ -81,11 +65,3 @@
         opacity: 1;
     }
 }
-
-// @media only screen and (max-width: 31.25em) {
-//     .social-icon {
-//         &__label {
-//             display: none;
-//         }
-//     }
-// }

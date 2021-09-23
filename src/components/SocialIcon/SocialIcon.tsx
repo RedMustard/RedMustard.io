@@ -27,19 +27,12 @@ const SocialIcon = ({
             onMouseOver={() => setShowText(true)}
             onMouseLeave={() => setShowText(false)}
         >
-            {/* <div className={`social-icon__icon social-icon__icon--${displayType} l-margin-vert-sm l-margin-horz-sm`}> */}
-
-
             <a
                 className="social-icon__link h-link"
                 target="_blank"
                 rel="noreferrer"
                 href={href}
                 tabIndex={0}
-                // onFocus={() => setShowText(true)}
-                // onBlur={() => setShowText(false)}
-                // onMouseOver={() => setShowText(true)}
-                // onMouseLeave={() => setShowText(false)}
             >
                 {children}
             </a>
@@ -47,7 +40,6 @@ const SocialIcon = ({
                 ? <span className={`social-icon__label social-icon__label--${displayType} h-h5`}>{label}</span>
                 : null
             }
-            {/* </div> */}
         </div>
     );
 };
