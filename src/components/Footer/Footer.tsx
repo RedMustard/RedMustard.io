@@ -6,7 +6,6 @@ export const MOBILE_WIDTH = 500;
 export const FOOTER_TOP_PADDING = 50;
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
     const footerRef = useRef<HTMLDivElement>(null);
     const [fixSocialIconsToRight, setFixSocialIconsToRight] = useState(false);
     const socialIconsDisplayType: SocialIconsDisplayType = fixSocialIconsToRight ? 'vertical' : 'horizontal';
@@ -59,7 +58,6 @@ const Footer = () => {
                 </div>
                 <div ref={footerRef} className="footer__copyright h-h5 l-padding-vert-md">
                     <span>Designed and developed by Travis Barnes.</span>
-                    <span>RedMustard.io &copy; {currentYear}</span>
                 </div>
             </div>
         </footer>

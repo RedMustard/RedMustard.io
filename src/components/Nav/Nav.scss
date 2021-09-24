@@ -89,9 +89,10 @@
 
         &__menu {
             display: flex;
-            height: 1.5rem;
+            // height: 1.5rem;
             padding: 0;
-            width: 1.5rem;
+            margin: 0 .3125rem 0 0;
+            // width: 1.5rem;
         }
 
         &__links-container {
@@ -124,7 +125,7 @@
         padding: 6.5625rem 0;
 
         &__link {
-            font-size: map.get(variables.$mobileFontSizes, 'h5');
+            font-size: map.get(variables.$mobileFontSizes, 'h4');
             height: 3.125rem;
             margin: .9375rem 0;
             width: 100%;
