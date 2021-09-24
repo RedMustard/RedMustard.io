@@ -7,15 +7,19 @@ const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [touchStartPosX, setTouchStartPosX] = useState<number>();
 
+    const setScrolling = (isNavOpen: boolean) => {
+        if (isNavOpen) {
+            document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
+        } else {
+            document.documentElement.style.overflow = 'auto';
+            document.body.style.overflow = 'auto';
+        }
+    };
+
     const handleOnClick = () => {
         setIsOpen(!isOpen);
-
-        //  TODO: Block scrolling when nav is open
-        // if (!isOpen) {
-        //     document.body.style.overflow = 'hidden';
-        // } else {
-        //     document.body.style.overflow = 'auto';
-        // }
+        setScrolling(!isOpen);
     };
 
     const handleOnTouchStart = (e: React.TouchEvent) => {
@@ -27,13 +31,7 @@ const Nav = () => {
 
         if (touchStartPosX && touchEndPosX > touchStartPosX) {
             setIsOpen(!isOpen);
-
-            //  TODO: Block scrolling when nav is open
-            // if (!isOpen) {
-            //     document.body.style.overflow = 'hidden';
-            // } else {
-            //     document.body.style.overflow = 'auto';
-            // }
+            setScrolling(!isOpen);
         }
     };
 
