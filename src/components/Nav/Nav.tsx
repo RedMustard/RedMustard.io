@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { disableScroll, enableScroll } from '../../utils/browser';
 import { CloseIcon } from '../Icons/Close';
 import { MenuIcon } from '../Icons/Menu';
 import SocialIcons from '../SocialIcons/SocialIcons';
@@ -9,11 +10,9 @@ const Nav = () => {
 
     const setScrolling = (isNavOpen: boolean) => {
         if (isNavOpen) {
-            document.body.style.overflow = 'hidden';
-            document.documentElement.style.overflow = 'hidden';
+            disableScroll();
         } else {
-            document.documentElement.style.overflow = 'auto';
-            document.body.style.overflow = 'auto';
+            enableScroll();
         }
     };
 
