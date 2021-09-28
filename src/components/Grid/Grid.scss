@@ -1,0 +1,24 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../../styles/variables';
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    grid-gap: 1rem;
+
+    &--horizontal {
+        flex-direction: row;
+    }
+
+    &--vertical {
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 31.25em) {
+    .grid {
+        grid-template-columns: repeat(1, minmax(250px, 1fr));
+    }
+}

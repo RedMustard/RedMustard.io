@@ -10,6 +10,8 @@
 @use '../components/SocialIcon/SocialIcon';
 @use '../components/ContentSection/ContentSection';
 @use '../components/Icons/Icons';
+@use '../components/Grid/Grid';
+@use '../components/ProjectTile/ProjectTile';
 
 body,
 html {
@@ -98,7 +100,7 @@ h6 {
     height: 100%;
 }
 
-@media only screen and (max-width: 31.25rem) {
+@media only screen and (max-width: 31.25em) {
     h1 {
         font-size: map.get(variables.$mobileFontSizes, 'h1');
     }

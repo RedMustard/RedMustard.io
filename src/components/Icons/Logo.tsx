@@ -1,4 +1,5 @@
 const Logo = () => (
+    // https://thenounproject.com/term/piano/75686/
     <svg className="icon logo-icon" width="45" height="45" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 90 90" enableBackground="new 0 0 90 90" xmlSpace="preserve">
         <polygon fill="#ffffff" points="38.182,57.753 20.18,47.91 20.18,42.455 38.182,32.652 38.182,39.074 25.625,45.113 38.182,51.379 " />
         <polygon fill="#ffffff" points="39.848,62.08 46.351,27.918 50.136,27.918 43.56,62.08" />

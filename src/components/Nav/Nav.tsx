@@ -1,56 +1,59 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { disableScroll, enableScroll } from '../../utils/browser';
 import { CloseIcon } from '../Icons/Close';
 import { MenuIcon } from '../Icons/Menu';
 import SocialIcons from '../SocialIcons/SocialIcons';
 
 const Nav = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isNavOpen, setIsNavOpen] = useState(false);
     const [touchStartPosX, setTouchStartPosX] = useState<number>();
 
-    const setScrolling = (isNavOpen: boolean) => {
-        if (isNavOpen) {
+    const setScrolling = (isOpen: boolean) => {
+        if (isOpen) {
             disableScroll();
         } else {
             enableScroll();
         }
     };
 
-    const handleOnClick = () => {
-        setIsOpen(!isOpen);
-        setScrolling(!isOpen);
+    const handleOnClick = (isOpen: boolean) => {
+        setIsNavOpen(!isOpen);
     };
 
     const handleOnTouchStart = (e: React.TouchEvent) => {
         setTouchStartPosX(e.targetTouches[0].clientX);
     };
 
-    const handleOnTouchEnd = (e: React.TouchEvent) => {
+    const handleOnTouchEnd = (e: React.TouchEvent, isOpen: boolean) => {
         const touchEndPosX = e.changedTouches[0].clientX;
 
         if (touchStartPosX && touchEndPosX > touchStartPosX) {
-            setIsOpen(!isOpen);
+            setIsNavOpen(!isOpen);
             setScrolling(!isOpen);
         }
     };
+
+    useEffect(() => {
+        setScrolling(isNavOpen);
+    }, [isNavOpen]);
 
     return (
         <nav className="nav">
             <div
                 role="presentation"
-                className={`nav__overlay ${isOpen ? 'nav__overlay--open' : ''}`}
-                onMouseDown={handleOnClick}
+                className={`nav__overlay ${isNavOpen ? 'nav__overlay--open' : ''}`}
+                onMouseDown={() => handleOnClick(isNavOpen)}
                 onTouchStartCapture={handleOnTouchStart}
-                onTouchEndCapture={handleOnTouchEnd}
+                onTouchEndCapture={(e) => handleOnTouchEnd(e, isNavOpen)}
             />
 
-            <div className={`nav__menu-container ${isOpen ? 'nav__menu-container--open' : ''}`}>
+            <div className={`nav__menu-container ${isNavOpen ? 'nav__menu-container--open' : ''}`}>
                 <button
                     type="button"
-                    className={`nav__menu h-link-like ${isOpen ? 'nav__menu--open' : ''}`}
-                    onClick={handleOnClick}
+                    className={`nav__menu h-link-like ${isNavOpen ? 'nav__menu--open' : ''}`}
+                    onClick={() => handleOnClick(isNavOpen)}
                 >
-                    {isOpen ? (
+                    {isNavOpen ? (
                         <CloseIcon />
                     ) : (
                         <MenuIcon />
@@ -59,12 +62,13 @@ const Nav = () => {
             </div>
 
             <div
-                className={`nav__links-container ${isOpen ? 'nav__links-container--open' : ''}`}
+                className={`nav__links-container ${isNavOpen ? 'nav__links-container--open' : ''}`}
                 onTouchStartCapture={handleOnTouchStart}
-                onTouchEndCapture={handleOnTouchEnd}
+                onTouchEndCapture={(e) => handleOnTouchEnd(e, isNavOpen)}
             >
                 <div className="nav-links">
-                    <a
+                    {/* TODO: About  */}
+                    {/* <a
                         href="/#about"
                         data-scroll
                         type="button"
@@ -72,9 +76,10 @@ const Nav = () => {
                         className="nav-links__link h-link"
                     >
                         About
-                    </a>
+                    </a> */}
 
-                    <a
+                    {/* TODO: Work */}
+                    {/* <a
                         href="/#work"
                         data-scroll
                         type="button"
@@ -82,19 +87,23 @@ const Nav = () => {
                         className="nav-links__link h-link"
                     >
                         Work
-                    </a>
+                    </a> */}
 
                     <a
                         href="/#projects"
                         data-scroll
                         type="button"
-                        onClick={handleOnClick}
+                        onClick={() => {
+                            if (isNavOpen) {
+                                handleOnClick(isNavOpen);
+                            }
+                        }}
                         className="nav-links__link h-link"
                     >
                         Projects
                     </a>
 
-                    <a
+                    {/* <a
                         href="/resume"
                         data-scroll
                         type="button"
@@ -102,7 +111,16 @@ const Nav = () => {
                         className="nav-links__link h-link"
                     >
                         Resume
-                    </a>
+                    </a> */}
+                    {/* <a
+                        href="/hire"
+                        data-scroll
+                        type="button"
+                        onClick={handleOnClick}
+                        className="nav-links__link h-link"
+                    >
+                        Hire me
+                    </a> */}
 
                     {/* TODO: Add blog */}
                     {/*

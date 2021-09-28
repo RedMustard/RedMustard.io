@@ -1,0 +1,53 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../../styles/variables';
+
+.project-tile {
+    background-color: #25252c;
+    border: 1px solid #34343e;
+    border-radius: 3px;
+    box-shadow: 0px 0.25rem 0.5rem 2px #1a1a1d;
+    color: variables.$white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 300px;
+    padding: 10px;
+    text-align: left;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__icon {
+        align-items: center;
+        display: flex;
+    }
+
+    &__title {
+        align-items: center;
+        display: flex;
+        font-weight: 400;
+    }
+
+    &__description {
+        min-height: 50px;
+    }
+
+    &__technologies {
+        align-self: flex-end;
+    }
+
+    &__bullet {
+        align-items: center;
+        display: flex;
+        font-weight: 300;
+        justify-content: flex-end;
+    }
+}
+
