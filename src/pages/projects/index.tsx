@@ -3,13 +3,11 @@ import React from 'react';
 
 // import { App } from '../../interfaces';
 // import { sampleAppData } from '../../utils/sample-data';
-import Link from 'next/link';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import ContentSection from '../../components/ContentSection/ContentSection';
 import Grid from '../../components/Grid/Grid';
 import ProjectTile from '../../components/ProjectTile/ProjectTile';
 import { PianoIcon } from '../../components/Icons/Piano';
-import { CodeIcon } from '../../components/Icons/Code';
 import { WebsiteIcon } from '../../components/Icons/Website';
 
 
