@@ -1,17 +1,18 @@
+import React from 'react';
 // import { GetStaticProps } from 'next';
 
 // import { App } from '../../interfaces';
 // import { sampleAppData } from '../../utils/sample-data';
-// import Layout from '../../components/Layout/Layout';
+import Link from 'next/link';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import ContentSection from '../../components/ContentSection/ContentSection';
+import Grid from '../../components/Grid/Grid';
+import ProjectTile from '../../components/ProjectTile/ProjectTile';
+import { PianoIcon } from '../../components/Icons/Piano';
+import { CodeIcon } from '../../components/Icons/Code';
+import { WebsiteIcon } from '../../components/Icons/Website';
 
 
-// type Props = {
-//     items?: App[];
-// };
-
-// const WithStaticProps = ({ items }: Props) => (
 const Projects = () => (
     <>
         <ContentSection sectionId="projects">
@@ -20,7 +21,34 @@ const Projects = () => (
                     Projects
                 </h1>
             </SectionTitle>
-            Nam cursus eros et lobortis ultrices. Suspendisse a ullamcorper tortor. Phasellus placerat vel ex id convallis. Mauris venenatis semper commodo. Quisque aliquet turpis in massa dapibus molestie. Donec fringilla dui ut quam lobortis, ut dictum ligula dignissim. Morbi in nulla laoreet, vestibulum elit eget, malesuada tellus. Pellentesque molestie, nisl ut varius congue, ante dui iaculis dui, a euismod felis purus quis nunc. In id odio eget libero porttitor vulputate. Nam eleifend gravida nibh. Donec in magna quis urna tincidunt feugiat. Etiam varius tempor sem eu pharetra. Nam rhoncus rhoncus odio vitae viverra. Suspendisse nunc ex, cursus a molestie et, ultrices vitae justo.
+
+            <Grid>
+                <ProjectTile
+                    title="Mustard Studio"
+                    description="Electron-based polysynth and step sequencer using WebAudio API"
+                    technologies={['Electron', 'Preact', 'WebAudio API']}
+                    icon={<PianoIcon />}
+                    key="project-mustard-studio"
+                    href="https://github.com/RedMustard/mustard-studio"
+                />
+                <ProjectTile
+                    title="RedMustard.io"
+                    description="Personal website built using Next.js"
+                    technologies={['Next.js', 'React', 'TypeScript']}
+                    icon={<WebsiteIcon />}
+                    key="project-redmustard-io"
+                    href="https://github.com/RedMustard/RedMustard.io"
+                />
+                {/* <ProjectTile
+                    title="SheerID JavaScript Library"
+                    description="JavaScript library built on top of SheerID's API."
+                    technologies={['React', 'Redux', 'TypeScript']}
+                    icon={<CodeIcon />}
+                    key="project-sheerid-jslib"
+                    href="https:////www.npmjs.com/package/@sheerid/jslib"
+                /> */}
+            </Grid>
+
         </ContentSection>
     </>
 );
