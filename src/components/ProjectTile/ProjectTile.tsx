@@ -37,7 +37,6 @@ const ProjectTile = ({
 
     return (
         <button type="button" onClick={handleOnClick} className="project-tile">
-            {/* <a href={href} target="_blank" rel="noreferer"> */}
             <div className="project-tile__header l-margin-btm-lg">
                 <div className="project-tile__icon">
                     {icon}
@@ -52,7 +51,6 @@ const ProjectTile = ({
             <div className="project-tile__technologies">
                 {getTechnologiesBullet()}
             </div>
-            {/* </a> */}
         </button>
     );
 };
