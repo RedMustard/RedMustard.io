@@ -19,13 +19,14 @@
         z-index: 0;
 
         &--vertical {
-            animation: label-slide-vert .2s ease-in;
+            animation: label-slide-vert .3s ease-in;
             padding-right: .3125rem;
             right: 25px;
+            white-space: nowrap;
         }
 
         &--horizontal {
-            animation: label-slide-horz .2s ease-in;
+            animation: label-slide-horz .3s ease-in;
             padding-top: .3125rem;
             top: 25px;
         }

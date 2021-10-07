@@ -34,11 +34,14 @@ $mobileHeaderHeight: variables.$mobileHeaderHeight;
         display: flex;
         height: 100%;
 
+        & svg path {
+            transition: .25s;
+            transition-timing-function: map.get(variables.$animationTiming, 'cubic-bezier');
+        }
+
         &:hover svg path {
             color: variables.$green;
             fill: variables.$green;
-            transition: .2s;
-            transition-timing-function: map.get(variables.$animationTiming, 'cubic-bezier');
         }
     }
 
