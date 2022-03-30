@@ -14,20 +14,21 @@
 
     &__label {
         cursor: pointer;
-        font-size: .875rem;
+        font-size: 0.875rem;
         position: absolute;
+        word-break: keep-all;
         z-index: 0;
 
         &--vertical {
-            animation: label-slide-vert .3s ease-in;
-            padding-right: .3125rem;
+            animation: label-slide-vert 0.3s ease-in;
+            padding-right: 0.3125rem;
             right: 25px;
             white-space: nowrap;
         }
 
         &--horizontal {
-            animation: label-slide-horz .3s ease-in;
-            padding-top: .3125rem;
+            animation: label-slide-horz 0.3s ease-in;
+            padding-top: 0.3125rem;
             top: 25px;
         }
     }
