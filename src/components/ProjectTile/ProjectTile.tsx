@@ -16,6 +16,7 @@ const ProjectTile = ({
     icon,
     href,
 }: ProjectTileProps) => {
+    const [isHovered, setIsHovered] = React.useState(false);
     const handleOnClick = () => {
         window.open(href, '_blank', 'noreferrer,noopener');
     };
@@ -25,7 +26,10 @@ const ProjectTile = ({
 
         technologies.forEach((technology) => {
             styledTechnologies.push(
-                <div className="project-tile__bullet h-h5" key={`${title}-${technology}`}>
+                <div
+                    className="project-tile__bullet h-h5"
+                    key={`${title}-${technology}`}
+                >
                     {technology}
                     <CircleIcon />
                 </div>,
@@ -36,14 +40,24 @@ const ProjectTile = ({
     };
 
     return (
-        <button type="button" onClick={handleOnClick} className="project-tile">
+        <button
+            type="button"
+            onClick={handleOnClick}
+            className="project-tile"
+            onFocus={() => setIsHovered(true)}
+            onBlur={() => setIsHovered(false)}
+            onMouseOver={() => setIsHovered(true)}
+            onMouseOut={() => setIsHovered(false)}
+        >
             <div className="project-tile__header l-margin-btm-lg">
-                <div className="project-tile__icon">
+                <div
+                    className={`project-tile__icon ${
+                        isHovered ? 'project-tile__icon--hovered' : ''
+                    }`}
+                >
                     {icon}
                 </div>
-                <div className="project-tile__title h-h4">
-                    {title}
-                </div>
+                <div className="project-tile__title h-h4">{title}</div>
             </div>
             <div className="project-tile__description l-margin-btm-xl">
                 {description}

@@ -28,6 +28,17 @@
     &__icon {
         align-items: center;
         display: flex;
+
+        &--hovered {
+            path {
+                transition: 0.3s;
+                transition-timing-function: map.get(
+                    variables.$animationTiming,
+                    'cubic-bezier'
+                );
+                fill: variables.$green;
+            }
+        }
     }
 
     &__title {
@@ -54,4 +65,3 @@
         justify-content: flex-end;
     }
 }
-
